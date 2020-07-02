@@ -55,7 +55,6 @@ class RiceBot:
         else:
             return
 
-
     def run_english_vocab(self, num_words):
         '''
         Attempts to correctly answer the given number of vocabulary questions. 

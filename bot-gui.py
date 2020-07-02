@@ -26,6 +26,7 @@ def run_bot(entry_val, chosen_category):
     except:
         messagebox.showerror("Failed", "Failed to run bot for some reason")
 
+
 HEIGHT = 250
 WIDTH = 500
 
