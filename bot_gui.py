@@ -1,6 +1,6 @@
+from bot import RiceBot
 import tkinter as tk
 from tkinter import messagebox
-from bot import RiceBot
 
 def run_bot(entry_val, chosen_category):
     '''

@@ -311,7 +311,7 @@ class RiceBot:
         Parameters
         ----------
         quote : str
-            The quote being searched for on google
+            The quote being searched on google
 
         options : list
             A list of the possible answers of who said the given quote
