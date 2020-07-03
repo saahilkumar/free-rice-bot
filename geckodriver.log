@@ -1,5 +1,0 @@
-1593720283451	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/2f/w_dhff4n31xd0mkxbd3dtmt40000gn/T/rust_mozprofileYKzppo"
-1593720285623	Marionette	INFO	Listening on port 59248
-1593720285635	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: https://freerice.com/categories/famous-quotations, line 20: TypeError: window.clientInformation is undefined
-1593722028135	Marionette	INFO	Stopped listening on port 59248
