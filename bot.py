@@ -11,7 +11,7 @@ class RiceBot:
         Parameters
         ----------
         category : str
-            The cateogry from freerice.com that the bot will answer questions of
+            The category from freerice.com that the bot will answer questions of
         '''
         self.category = category
 
@@ -50,6 +50,8 @@ class RiceBot:
             self.run_language(num_questions, "german")
         elif self.category == "czech":
             self.run_language(num_questions, "czech")
+        elif self.category == "latin":
+            self.run_language(num_questions, "latin")
         elif self.category == "famous-quotations":
             self.run_quotations(num_questions)
         else:
@@ -149,6 +151,8 @@ class RiceBot:
 
             # initializing the question and its translation in the given language
             question = self.init_question().text.split(" means")[0]
+            if language == "latin":
+                question = question.split(",")[0]
             translation = Translator().translate(question, src = language).text
 
             # initializing the four options
