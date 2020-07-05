@@ -1,5 +1,5 @@
 # free-rice-bot
-A bot that runs on freerice.com, which is a website that donates 10 grains of rice for every correct answer to a question.
+A bot that runs on freerice.com, which is a website that donates 10 grains of rice for every correct answer to a question. Read more about it at my [blog](https://medium.com/@saahilkumar/how-i-made-a-bot-that-can-raise-money-for-charity-490a302f404f?source=friends_link&sk=c06f55677134aa8b4e151634c8dc056b)
 
 ### Supported Categories and the Bot's Accuracy
 
