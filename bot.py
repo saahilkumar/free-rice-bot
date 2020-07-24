@@ -137,7 +137,7 @@ class RiceBot:
     def run_language(self, num_questions, language):
         '''
         Attempts to correctly answer the given number of language translation questions. 
-        It has about a 90% accuracy rate by using an unofficial google translate api to translate the
+        It has about an 80% accuracy rate by using an unofficial google translate api to translate the
         question and find the best option.
 
         Parameters
@@ -208,6 +208,16 @@ class RiceBot:
         print("Done!")
 
     def run_flags(self, num_questions):
+        '''
+        Attempts to correctly answer the given number of world flag questions. 
+        It has about an 80% accuracy rate by using a python library I created called
+        flagpy to identify the country of each flag.
+
+        Parameters
+        ----------
+        num_words : int
+            The number of vocabulary questions for the bot to answer
+        '''
         for i in range(num_questions):
             time.sleep(random.random() * 4 + 2) # enough time to simulate reading the question
 
@@ -222,7 +232,7 @@ class RiceBot:
 
             # clicks on the option that matches the identified country name
             for option in options:
-                if country == option.text:
+                if self.semi_equals(country, option.text):
                     option.click()
                     found_country = True
                     break
