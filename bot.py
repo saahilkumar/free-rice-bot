@@ -4,6 +4,7 @@ from googletrans import Translator
 import time
 import random
 import requests
+import flagpy as fp
 
 class RiceBot:
     def __init__(self, category):
@@ -54,6 +55,8 @@ class RiceBot:
             self.run_language(num_questions, "latin")
         elif self.category == "famous-quotations":
             self.run_quotations(num_questions)
+        elif self.category == "flags-of-the-world":
+            self.run_flags(num_questions)
         else:
             return
 
@@ -198,6 +201,35 @@ class RiceBot:
 
             # clicking the option whose name pops up when the quote is searched on google
             self.find_quote_source(question, options).click()
+
+            print("Finished with question", str(i+1))
+            time.sleep(5) # enough time for the next question to load in
+
+        print("Done!")
+
+    def run_flags(self, num_questions):
+        for i in range(num_questions):
+            time.sleep(random.random() * 4 + 2) # enough time to simulate reading the question
+
+            #initializing the flag
+            flag = self.driver.find_element_by_xpath('//*[@id="root"]/section/div/div[1]/div/div/div[4]/div[1]/div/div[1]/img')
+
+            # initializing the four options
+            options = self.init_options()
+            found_country = False
+
+            country = fp.identify(flag.get_attribute("src"))
+
+            # clicks on the option that matches the identified country name
+            for option in options:
+                if country == option.text:
+                    option.click()
+                    found_country = True
+                    break
+            
+            # if none of the options match the identified country, choose a random one
+            if not found_country:
+                options[random.randint(0,3)].click()
 
             print("Finished with question", str(i+1))
             time.sleep(5) # enough time for the next question to load in

@@ -32,7 +32,7 @@ WIDTH = 500
 
 # the categories that this bot supports right now
 categories = {"english-vocabulary", "multiplication-table", "famous-quotations", "spanish", 
-"french", "german", "italian", "czech", "latin"}
+"french", "german", "italian", "czech", "latin", "flags-of-the-world"}
 
 root = tk.Tk()
 root.title("Free Rice Bot")
