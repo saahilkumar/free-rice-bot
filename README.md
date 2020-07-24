@@ -13,6 +13,8 @@ Spanish, French, Italian, Czech, German: 80%
 
 Latin: 60%
 
+World Flags: 80%
+
 ### How to Use
 The bot uses Selenium WebDriver (Geckodriver) to open up freerice.com on Firefox, 
 so you must have that downloaded and then change the path accordingly within the bot's code.
